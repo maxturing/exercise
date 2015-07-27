@@ -151,3 +151,68 @@ variable allow modification
 		sum += i;
 	std::cout << "sum from 0 to " << i //error: variable i is undefined
 			<< " is " << sum << std::endl;
+
+## Exercise 2.22
+	
+	const int ubound = 100;
+	for (int i = 0; i < ubound; ++i)
+		//process i
+
+## Exercise 2.23
+
+	const int buf //error: buf is uninitialized const
+	int cnt = 0; //ok
+	const int sz = cnt; //ok
+	cnt++; //ok
+	sz++; //error: attempt to writte to const object
+
+## Exercise 2.24
+
+1. int ival = 1.01; //ok
+2. int &rval1 = 1.01; //error: initializer must be an object
+3. int &rval2 = ival; //ok
+4. const int &rval3 = 1; //ok
+
+## Exercise 2.25
+
+1. rval2 = 3.14159; //ok
+2. rval2 = rval3; //ok
+3. ival = rval3; //ok
+4. rval3 = ival; //error: assignment of read-only reference
+
+## Exercise 2.26
+
+1. int ival = 0; //ok
+2. const int &ri = 0; //ok
+3. ival = ri; //ok
+4. ri = ival; //error: assignment of read-only reference
+
+## Exercise 2.27
+
+	int i, &ri = i;
+	i = 5; ri = 10;
+	std::cout << i << " " << ri << std::endl;
+	//output: 10 10
+
+## Exercise 2.28
+	
+	[Error] expected ';' after class definition
+
+## Exercise 2.29
+
+- The `public` section of a class defines members that can be accessed by any part of the program.
+- Code that is not part of the class does not have access to the `private` member.
+
+## Exercise 2.30
+
+	class phone {
+		string global_number;
+		string local_number;
+	};
+
+	class address {
+		string country;
+		string province;
+		string city;
+		string county;
+	};

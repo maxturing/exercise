@@ -59,28 +59,31 @@ CF
 
 ## Exercise 2.10
 
-	#include <iostream>
+```cpp
+#include <iostream>
 
-	int main() {
-		std::cout << "2M" << std::endl;
-		std::cout << "2\tM" << std::endl;
-	}
+int main() {
+	std::cout << "2M" << std::endl;
+	std::cout << "2\tM" << std::endl;
+}
+```
 
 ## Exercise 2.11
 
-	#include <iostream>
-	int main() {
-		int base, pow, result = 1;
-		std::cout << "Enter base and exponent: ";
-		std::cin >> base >> pow;
-		for(int i = 0; i < pow; ++)
-			result *= base;
-		std::cout << base
-				<< " raised to the power of "
-				<< pow << ": \t"
-				<< result << std::endl;
-	}
-
+```cpp
+#include <iostream>
+int main() {
+	int base, pow, result = 1;
+	std::cout << "Enter base and exponent: ";
+	std::cin >> base >> pow;
+	for(int i = 0; i < pow; ++)
+		result *= base;
+	std::cout << base
+			<< " raised to the power of "
+			<< pow << ": \t"
+			<< result << std::endl;
+}
+```
 
 ## Exercise 2.12
 
@@ -113,58 +116,72 @@ variable allow modification
 
 ## Exercise 2.17
 
-	std::string global_str; //initialized to empty
-	int global_int; //initialized to zero
-	int main() {
-		int local_int; //uninitialized
-		//...
-		return 0;
-	}
+```cpp
+std::string global_str; //initialized to empty
+int global_int; //initialized to zero
+int main() {
+	int local_int; //uninitialized
+	//...
+	return 0;
+}
+```
 
 ## Exercise 2.18
 
-	extern std::string name; //declares but not define
-	std::string name("exercise 3.5a"); //definition
-	extern std::string name("exercise 3.5a"); //error: redifinition of name
+```cpp
+extern std::string name; //declares but not define
+std::string name("exercise 3.5a"); //definition
+extern std::string name("exercise 3.5a"); //error: redifinition of name
+```
 
 ## Exercise 2.19
 
-	int i = 42;
-	int main() {
-		int i = 100;
-		int j = i; //j = 100
-		// ...
-	}
+```cpp
+int i = 42;
+int main() {
+	int i = 100;
+	int j = i; //j = 100
+	// ...
+}
+```
 
 ## Exercise 2.20
 
-	int i = 100, sum = 0;
-	for(int i = 0; i != 10; ++i)
-		sum += i;
-	std::cout << i << " " << sum << std::endl;
-	//output: 100 45
+```cpp
+int i = 100, sum = 0;
+for(int i = 0; i != 10; ++i)
+	sum += i;
+std::cout << i << " " << sum << std::endl;
+//output: 100 45
+```
 
 ## Exercise 2.21
 
-	int sum = 0;
-	for(int i = 0; i != 10; ++i)
-		sum += i;
-	std::cout << "sum from 0 to " << i //error: variable i is undefined
-			<< " is " << sum << std::endl;
+```cpp
+int sum = 0;
+for(int i = 0; i != 10; ++i)
+	sum += i;
+std::cout << "sum from 0 to " << i //error: variable i is undefined
+		<< " is " << sum << std::endl;
+```
 
 ## Exercise 2.22
-	
-	const int ubound = 100;
-	for (int i = 0; i < ubound; ++i)
-		//process i
+
+```cpp
+const int ubound = 100;
+for (int i = 0; i < ubound; ++i)
+	//process i
+```
 
 ## Exercise 2.23
 
-	const int buf //error: buf is uninitialized const
-	int cnt = 0; //ok
-	const int sz = cnt; //ok
-	cnt++; //ok
-	sz++; //error: attempt to writte to const object
+```cpp
+const int buf //error: buf is uninitialized const
+int cnt = 0; //ok
+const int sz = cnt; //ok
+cnt++; //ok
+sz++; //error: attempt to writte to const object
+```
 
 ## Exercise 2.24
 
@@ -189,14 +206,16 @@ variable allow modification
 
 ## Exercise 2.27
 
-	int i, &ri = i;
-	i = 5; ri = 10;
-	std::cout << i << " " << ri << std::endl;
-	//output: 10 10
+```cpp
+int i, &ri = i;
+i = 5; ri = 10;
+std::cout << i << " " << ri << std::endl;
+//output: 10 10
+```
 
 ## Exercise 2.28
 	
-	[Error] expected ';' after class definition
+> [Error] expected ';' after class definition
 
 ## Exercise 2.29
 
@@ -205,14 +224,16 @@ variable allow modification
 
 ## Exercise 2.30
 
-	class phone {
-		string global_number;
-		string local_number;
-	};
+```cpp
+class phone {
+	string global_number;
+	string local_number;
+};
 
-	class address {
-		string country;
-		string province;
-		string city;
-		string county;
-	};
+class address {
+	string country;
+	string province;
+	string city;
+	string county;
+};
+```

@@ -7,43 +7,51 @@ Chapter 1
 
 ## Exercise 1.2
 
-	int main() {
-		return -1;
-	}
+```cpp
+int main() {
+	return -1;
+}
+```
 
 ## Exercise 1.3
 
-	#include <iostream>
-	int main() {
-		std::cout << "Hello, World" << std::endl;
-	}
+```cpp
+#include <iostream>
+int main() {
+	std::cout << "Hello, World" << std::endl;
+}
+```
 
 ## Exercise 1.4
 
-	#include <iostream>
-	int main() {
-		int v1, v2;
-		cout << "Enter two numbers: ";
-		cin >> v1 >> v2;
-		cout << "The product of " << v1 << " and " << v2;
-		cout << " is " << v1 * v2 << endl;
-	}
+```cpp
+#include <iostream>
+int main() {
+	int v1, v2;
+	cout << "Enter two numbers: ";
+	cin >> v1 >> v2;
+	cout << "The product of " << v1 << " and " << v2;
+	cout << " is " << v1 * v2 << endl;
+}
+```
 
 ## Exercise 1.5
 
-	#include <iostream>
-	int main() {
-		int v1, v2;
-		cout << "Enter two numbers: ";
-		cin >> v1 >> v2;
-		cout << "The product of ";
-		cout << v1;
-		cout << " and ";
-		cout << v2;
-		cout << " is ";
-		cout << v1 * v2;
-		cout << endl;
-	}
+```cpp
+#include <iostream>
+int main() {
+	int v1, v2;
+	cout << "Enter two numbers: ";
+	cin >> v1 >> v2;
+	cout << "The product of ";
+	cout << v1;
+	cout << " and ";
+	cout << v2;
+	cout << " is ";
+	cout << v1 * v2;
+	cout << endl;
+}
+```
 
 ## Exercise 1.6
 

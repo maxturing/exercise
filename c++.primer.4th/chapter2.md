@@ -28,23 +28,23 @@ Chapter 2
 ## Exercise 2.7
 
 1. character string
-- single character `a` of type `char`.
-- single character `a` of type `wchar_t`.
-- the letter `a` and the null character of type `char`.
-- the letter `a` and the null chatacter of type `wchar_t`.
+	- single character `a` of type `char`.
+	- single character `a` of type `wchar_t`.
+	- the letter `a` and the null character of type `char`.
+	- the letter `a` and the null chatacter of type `wchar_t`.
 
 2. integer
-- int
-- unsigned int
-- long
-- unsigned long
-- octal
-- hexadecimal
+	- int
+	- unsigned int
+	- long
+	- unsigned long
+	- octal
+	- hexadecimal
 
 3. floating-point
-- double
-- float
-- double
+	- double
+	- float
+	- double
 
 ## Exercise 2.8
 

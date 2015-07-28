@@ -192,3 +192,165 @@ pic = &ic; //ok
 cpi = pic; //error: convert `const int *` to `int *`
 ic = *cpic; //error: attempt to writte to const object
 ```
+
+## Exercise 4.22
+
+```cpp
+const char *cp = "hello";
+int cnt;
+//cp always > 0
+while(cp) {++cnt; ++cp;}
+//*cp = h e l l o \0;
+while(*cp) {++cnt; ++cp;}
+```
+
+## Exercise 4.23
+
+```cpp
+const char ca[] = {'h', 'e', 'l', 'l', 'o'};
+const char *cp = ca;
+while(*cp) {
+	cout << *cp << endl;
+	++cp;
+}
+```
+
+> the loop is apt to read characters starting at cp until it encounters a null character somewhere in memory.
+
+## Exercise 4.24
+
+- strcpy(s1, s2)
+Copies s2 into s1, Return s1
+
+- strncpy(s1, s2, n)
+Cpoies n characters from s2 into s1. Return s1
+
+- strcpy more convenient, strncpy more secure
+
+## Exercise 4.25
+
+- string
+	- operator>
+	- operatlr<
+	- operator==
+
+- c-style chatachter
+	- strcmp(s1, s2)
+
+## Exercise 4.26
+
+```cpp
+string word;
+cin >> word;
+char buf[20];
+cin >> buf;
+```
+
+## Exercise 4.27
+
+```cpp
+int *pa = new int[10];
+delete []pa;
+```
+
+## Exercise 4.28
+
+```cpp
+#include <iostream>
+#include <vector>
+using namespace std;
+int main() {
+	int v;
+	vector<int> vec;
+	while(cin >> v)
+		vec.push_back(v);
+	int *arr = new int[vec.size()];
+	vector<int>::size_type i;
+	for(i = 0; i < vec.size(); ++i)
+		arr[i] = vec[i];
+}
+```
+
+## Exercise 4.29
+
+
+
+## Exercise 4.30
+
+```cpp
+char *pca = "aabbcc";
+char *pcb = "ddeeff";
+pca = strcat(pca, pcb);
+
+string s1 = "aabbcc";
+string s2 = "ddeeff";
+s1 = s1 + s2;
+```
+
+## Exercise 4.31
+
+
+
+## Exercise 4.32
+
+```cpp
+vector<int> vec = {0, 1, 4, 2};
+```
+
+## Exercise 4.33
+
+```cpp
+vector<int> vec = {0, 1, 4, 2};
+int arr = new int[vec.size()];
+vector<int>::size_type i;
+for(i = 0; i < vec.size(); ++i)
+	arr[i] = ve[i];
+```
+
+## Exercise 4.34
+
+```cpp
+vector<string> vec;
+string str;
+while(cin >> str)
+	vec.push_back(str);
+vector<string>::size_type i;
+char *string_array[] = new char*[vec.size()];
+for(i = 0; i < vec.size(); ++i)
+	string_array[i] = vec[i].c_str();
+```
+
+## Exercise 4.35
+
+```cpp
+vector<string> vec;
+string str;
+while(cin >> str)
+	vec.push_back(str);
+vector<string>::size_type i;
+char *string_array[] = new char*[vec.size()];
+for(i = 0; i < vec.size(); ++i)
+	string_array[i] = vec[i].c_str();
+for(i = 0; i < vec.size(); ++i) {
+	cout << vec[i] << endl;
+	cout << string_array[i] << endl;
+	delete []string_array[i];
+}
+```
+
+## Exercise 4.36
+
+```cpp
+#include <iostream>
+using namespace std;
+int main() {
+	int ia[3][4] = {
+		{0, 1, 2, 3},
+		{4, 5, 6, 7},
+		{8, 9, 10, 11}
+	};
+	for(int (*p)[4] = ia; p != ia + 3; ++p)
+		for(int *q = *p; q != *p + 4; ++q)
+			cout << *q << endl;
+}
+```
